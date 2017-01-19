@@ -14,3 +14,10 @@ Copy the `Brewfile.example` file into you home directory and if needed add more 
 In the end, there is not much more to do then copying `install_my_mac.sh` in you home directory of your new mac, open the terminal and start it with `./install_my_mac.sh` and wait some time. From time to time you my need to push *the any key* but overall, everything should work automatically.
 
 You are done then and have more time to configure your freshly installed mac.
+
+## Where to get a Brewfile?
+The supplied `Brewfile.example` has all apps and command line tools I need in webdevelopment or needed in the recent past. This may or may not be representative. If you have `brew` and `brew-bundler` installed, you can *export* your actual instalalled programs with `brew bundle dump` and use this as a source.
+
+## Further reading
+- [Homebrew Bundler](https://github.com/Homebrew/homebrew-bundle)
+- [Mac Appstore Command Line Interface](https://github.com/mas-cli/mas)
