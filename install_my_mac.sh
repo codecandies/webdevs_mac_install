@@ -12,3 +12,7 @@ echo  '\n'
 echo Install bundled software
 read -p "Press any key to continue... " -n1 -s
 brew bundle
+echo  '\n'
+echo Install oh-my-zsh
+read -p "Press any key to continue... " -n1 -s
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
