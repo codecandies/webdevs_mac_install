@@ -1,64 +1,359 @@
+# Example brewfile for webdevs_mac_install
+# by Nico Bruenjes
+#
+# Copy/Rename this file to Brewfile into your home folder
+# Edit or add own apps and libs and use the
+# install_my_mac.sh shell script to start installation process
+#
+# We use this file to setup frontend developer macs
+# it install much software 
+#
+# Thanks for https://github.com/joelparkerhenderson/brewfile
+# for inspiring the commenting system
+# and a lot of useful apps
+
+# if you prefer another folder plz edit
 cask_args appdir: '/Applications'
+
+##
+# Taps
+##
+
+# tapping caskrooms for later use
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
+tap 'caskroom/versions'
+
+# tapping for later use
 tap 'homebrew/binary'
+tap 'homebrew/boneyard'
+tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/fuse'
 tap 'homebrew/php'
 tap 'homebrew/python'
 tap 'homebrew/versions'
-tap 'homebrew/boneyard'
-brew 'autoconf'
+
+
+##
+# Brew extensions and helper
+##
+
+# Install OS X applications
+brew 'cask'
+
+# Install applications from Mac App Store
+brew 'mas'
+
+
+##
+# Browsers
+##
+
+# Firefox official
+cask 'firefox'
+
+# Firefox developer edition
+cask 'firefox-developer-edition'
+
+# Multifirefox may be used to run concurrent FF versions (we need this in cms tests)
+cask 'multifirefox'
+
+# Chrome
+cask 'google-chrome'
+
+# Chrome open source version (usage in testing possible)
+cask 'chromium'
+
+# Chrome Canary
+cask 'caskroom/versions/google-chrome-canary'
+
+# Opera
+cask 'opera'
+
+# lynx command line browser
+brew 'lynx'
+
+
+##
+# Editors
+##
+
+# vim, if you like the command-line
+brew 'vim'
+
+# MacVIM, if you want to use vim but dislike the commenadline
+cask 'macvim'
+
+# I'd prefer sublime text
+cask 'sublime-text'
+
+# some like it big
+cask 'atom'
+
+# and for the young hipsters
+cask 'visual-studio-code'
+
+##
+# Daily helper
+##
+
+# curl is a command line tool for transferring data with URL syntax
+brew 'curl'
+
+# HTTrack is a free and easy-to-use offline browser utility.
+brew 'httrack'
+
+# Wget is a free software package for retrieving files using HTTP and FTP.
+brew 'wget'
+
+# Basic file, shell and text manipulation utilities of the GNU operating system.
 brew 'coreutils'
-brew 'faac'
-brew 'ffmpeg', args: ['with-faac']
-brew 'freetype'
-brew 'gcc'
-brew 'gdbm'
-brew 'gettext'
+
+# OpenSSL is an open-source implementation of the SSL and TLS protocols.
+brew 'openssl'
+
+# PCRE: Perl-compatible regular expressions, for better searching.
+brew 'pcre'
+
+# Functions for use by applications that allow users to edit command lines while typing.
+brew 'readline'
+
+# Alfred desktop command line
+cask 'alfred'
+
+# Clean your programs
+cask 'appcleaner'
+
+# Drop files and use paper
+cask 'dropbox'
+
+# Drop files and use google apps
+cask 'google-drive'
+
+# if you want to read docs and powerpoints
+cask 'openoffice'
+
+# Utility for the caps lock key and some international keys in PC keyboards
+cask 'seil'
+
+# unarchiving help for mac
+cask 'the-unarchiver'
+
+##
+# Useful apps for webdevs
+##
+
+# if you work with designers you'll need this
+cask 'colour-contrast-analyser'
+
+# pixel ruler
+cask 'free-ruler'
+
+# if you need a quick apache/php setup
+cask 'mamp'
+
+# very useful chat client
+cask 'slack'
+
+
+##
+# Privacy
+##
+
+# gpg tools for mail
+cask 'gpgtools-beta'
+
+# Keybase.io digital signature manager
+cask 'keybase'
+
+
+##
+# Terminals
+##
+cask 'iterm2'
+
+
+##
+# Shells
+##
+
+# zsh
+brew 'zsh', link: false
+brew 'zsh-completions'
+brew 'zsh-syntax-highlighting'
+
+
+##
+# Version Control
+##
+
+# git cli and desktop client
 brew 'git'
+cask 'git'
+
+# git cli helper
+brew 'git-crypt'
 brew 'git-extras'
-brew 'go'
-brew 'graphviz'
 brew 'hub'
+
+# Another git client to choose from
+cask 'sourcetree'
+
+# I'd prefer tower
+cask 'tower'
+
+
+##
+# Virtual machines
+##
+
+# Vagrant creates and configures portable development environments.
+cask 'vagrant'
+cask 'vagrant-manager'
+
+# VirtualBox creates and configures portable development environments, by Oracle.
+cask 'virtualbox'
+
+
+##
+# Test setup
+##
+
+# Chromedriver for selenium tests
+brew 'chromedriver'
+
+# Firefox driver for Selenium tests
+brew 'geckodriver'
+
+# PhantomJS is discontinued but maybe used here and there
+brew 'phantomjs'
+
+
+##
+# Media related
+##
+
+brew 'exif'
+brew 'exiftags'
+brew 'exiftool'
+brew 'flac'
+brew 'ffmpeg'
+brew 'ffmpeg2theora'
+brew 'ffmpegthumbnailer'
+brew 'libogg'
+brew 'libvorbis'
 brew 'imagemagick', args: ['with-little-cms', 'with-little-cms2']
-brew 'jpeg'
-brew 'lame'
-brew 'libffi'
-brew 'libmemcached'
+brew 'rtmpdump'
+brew 'theora'
+brew 'youtube-dl'
+brew 'webp'
+
+
+##
+# Font-Related
+##
+
+# Fontconfig is a library for configuring and customizing font access.
+brew 'fontconfig'
+
+# FreeType is a freely available software library to render fonts.
+brew 'freetype'
+
+# Fira Coding font
+cask 'font-fira-code'
+
+
+##
+# Image-Related
+##
+
+brew 'libgphoto2'
+brew 'libjpg'
 brew 'libpng'
 brew 'libtiff'
-brew 'libvorbis'
-brew 'little-cms'
-brew 'little-cms2'
-brew 'mas'
-brew 'memcached'
-brew 'mercurial'
-brew 'node'
-brew 'openssl'
-brew 'pcre'
-brew 'pyenv'
-brew 'python'
-brew 'python3'
-brew 'readline'
-brew 'rtmpdump'
-brew 'sphinx-doc'
-brew 'sqlite'
-brew 'ssh-copy-id'
-brew 'texi2html'
-brew 'webp'
-brew 'wget'
-brew 'zsh'
-brew 'zsh-completions'
+brew 'libwebp'
 
-cask 'alfred'
-cask 'font-fira-code'
-cask 'firefox'
-cask 'free-ruler'
-cask 'gpgtools'
-cask 'iterm2'
-cask 'mamp'
-cask 'slack'
-cask 'sublime-text'
-cask 'vagrant'
-cask 'virtualbox'
+
+##
+# Programming languages
+##
+
+# Go
+brew 'go'
+
+# Python (we still need python@2 for cms development)
+brew 'python'
+brew 'python@2', link: false
+
+
+##
+# Libraries
+##
+
+# THe libevent API provides provides asynchronous event notification and callbacks.
+brew 'libevent'
+
+# Magic number recognition library for file types.
+brew 'libmagic'
+
+# Foreign Function Interface Library
+brew 'libffi'
+
+# File magic number recognizer
+brew 'libmagic'
+
+# GNU libtool is a generic library support script.
+brew 'libtool'
+
+# YAML markup language
+brew 'libyaml'
+
+# Readline terminal input
+brew 'libreadline'
+
+
+##
+# Prequisites for ZON CMS Development
+# (if not otherwise already installed)
+##
+brew 'git'
+brew 'graphviz'
+brew 'libevent'
+brew 'libjpg'
+brew 'libmagic'
+brew 'libffi'
+brew 'libmemcached'
+brew 'python'
+brew 'python@2', link: false
+brew 'pyenv'
+brew 'pkg-config'
+brew 'ruby'
+brew 'wget'
+
+
+##
+# Tools for ZON Development
+##
+brew 'node'
+brew 'sphinx-doc'
+brew 'ssh-copy-id'
+
+
+##
+# Database stuff
+##
+
+# mysql
+brew 'mysql'
+brew 'mysql-utilities'
+
+# sqlite
+brew 'sqlite'
+
+# PostgreSQL database.
+brew 'postgres'
+brew 'postgresql'
+
+# Postgres App provides a Mac-friendly database.
+cask 'postgres'
