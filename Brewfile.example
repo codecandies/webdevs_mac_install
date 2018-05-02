@@ -25,14 +25,9 @@ tap 'caskroom/fonts'
 tap 'caskroom/versions'
 
 # tapping for later use
-tap 'homebrew/binary'
 tap 'homebrew/boneyard'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
-tap 'homebrew/fuse'
-tap 'homebrew/php'
-tap 'homebrew/python'
-tap 'homebrew/versions'
 
 
 ##
@@ -134,9 +129,6 @@ cask 'google-drive'
 # if you want to read docs and powerpoints
 cask 'openoffice'
 
-# Utility for the caps lock key and some international keys in PC keyboards
-cask 'seil'
-
 # unarchiving help for mac
 cask 'the-unarchiver'
 
@@ -162,7 +154,7 @@ cask 'slack'
 ##
 
 # gpg tools for mail
-cask 'gpgtools-beta'
+cask 'gpg-suite'
 
 # Keybase.io digital signature manager
 cask 'keybase'
@@ -188,9 +180,9 @@ brew 'zsh-syntax-highlighting'
 # Version Control
 ##
 
-# git cli and desktop client
+# git cli and github desktop client
 brew 'git'
-cask 'git'
+cask 'github'
 
 # git cli helper
 brew 'git-crypt'
@@ -272,7 +264,6 @@ brew 'libgphoto2'
 brew 'libjpg'
 brew 'libpng'
 brew 'libtiff'
-brew 'libwebp'
 
 
 ##
