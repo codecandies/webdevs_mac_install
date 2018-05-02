@@ -15,9 +15,19 @@ In the end, there is not much more to do then copying `install_my_mac.sh` in you
 
 You are done then and have more time to configure your freshly installed mac.
 
+## What the script does
+- Install xcode utilities
+- Install homebrew
+- Install homebrew bundle
+- Install all software listed in the local `Brewfile`
+- Install oh-my-zsh
+
 ## Where to get a Brewfile?
 The supplied `Brewfile.example` has all apps and command line tools I need in webdevelopment or needed in the recent past. This may or may not be representative. If you have `brew` and `brew-bundler` installed, you can *export* your actual instalalled programs with `brew bundle dump` and use this as a source.
 
 ## Further reading
+- [Homebrew](https://brew.sh/)
 - [Homebrew Bundler](https://github.com/Homebrew/homebrew-bundle)
+- [Homebrew Cask](https://github.com/caskroom/homebrew-cask)
 - [Mac Appstore Command Line Interface](https://github.com/mas-cli/mas)
+- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
