@@ -300,9 +300,6 @@ brew 'libtool'
 # YAML markup language
 brew 'libyaml'
 
-# Readline terminal input
-brew 'libreadline'
-
 
 ##
 # Prequisites for ZON CMS Development
