@@ -307,7 +307,6 @@ brew 'libyaml'
 ##
 brew 'git'
 brew 'graphviz'
-brew 'kustomize'
 brew 'libevent'
 brew 'libjpg'
 brew 'libmagic'
